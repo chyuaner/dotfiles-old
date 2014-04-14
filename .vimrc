@@ -3,13 +3,15 @@ set encoding=utf-8
 set fileencodings=utf-8,cp950
  
 " 編輯喜好設定
-syntax on        " 語法上色顯示
+"syntax on        " 語法上色顯示
 "set nocompatible " VIM 不使用和 VI 相容的模式
 " set ai           " 自動縮排
 set shiftwidth=2 " 設定縮排寬度 = 4
 set tabstop=4    " tab 的字元數
 set softtabstop=4
 " set expandtab   " 用 space 代替 tab
+" 設定摺疊 {{{ , }}}
+set foldmethod=marker
 
 " 共用剪貼簿
 set clipboard=unnamed 
@@ -29,7 +31,7 @@ set smartindent  " 設定 smartindent
 set confirm      " 操作過程有衝突時，以明確的文字來詢問
 set history=100  " 保留 100 個使用過的指令
 set cursorline   " 顯示目前的游標位置
-set colorcolumn=76 " 顯示編輯器建議寬度
+set colorcolumn=76   " 顯示編輯器建議寬度
  
 set laststatus=2
 set statusline=%4*%<\%m%<[%f\%r%h%w]\ [%{&ff},%{&fileencoding},%Y]%=\[Position=%l,%v,%p%%]
@@ -44,3 +46,5 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
  
 "colorscheme torte
 colorscheme wombat
+
+nmap <F8> :TagbarToggle<CR>
