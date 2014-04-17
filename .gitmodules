@@ -1,3 +1,9 @@
 [submodule "git/gitignore"]
 	path = git/gitignore
 	url = git@github.com:github/gitignore.git
+[submodule "zsh"]
+	path = zsh
+	url = git@github.com:chyuaner/rc-zsh.git
+[submodule "vim"]
+	path = vim
+	url = git@github.com:chyuaner/rc-vim.git
