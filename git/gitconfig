@@ -1,8 +1,12 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+[user]
+	name = Yuan Chiu
+	email = chyuaner@gmail.com
 [core]
 	excludesfile = /Users/yuan/.gitignore_global
+	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -21,3 +25,9 @@
 	a = add .
 	cm = commit -m 
 	c = checkout
+	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+[filter "lfs"]
+	required = true
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	clean = git-lfs clean -- %f

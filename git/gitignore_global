@@ -6,6 +6,7 @@
 # Swap Files #
 .*.kate-swp
 .swp.*
+*.swp
 
 .DS_Store
 .AppleDouble
@@ -36,3 +37,7 @@ Session.vim
 .netrwhist
 *~
 
+
+# Codenvy files
+.codenvy/misc.xml
+.vfs/
